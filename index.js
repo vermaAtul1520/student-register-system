@@ -10,10 +10,6 @@ app.use(express.json())
 app.use(userRouter)
 app.use(studentRouter)
 
-app.get('/',(req,res)=>{
-    res.send('testing')
-})
-
 app.get("/", (req, res) => {
     res.send({ msg: "Hey congratulations, we are connected" });
 });

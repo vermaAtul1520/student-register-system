@@ -70,13 +70,12 @@ router.post('/students/login', async (req, res) => {
             req.body.password
             );
             const token = await student.generateAuthToken(student)
-            console.log("hello")
-            console.log(student)
+            // console.log("hello")
+            // console.log(student)
         student.token=token;
         res.send(student)
     } catch (e) {
-        console.log(e);
-
+        // console.log(e);
         res.status(400).send()
     }
 })
